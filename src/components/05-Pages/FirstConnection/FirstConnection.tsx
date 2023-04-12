@@ -43,7 +43,7 @@ const FirstConnection = () => {
     useEffect(() => {
         setCurrentUser(user)
         if (!user?.isFirstConnection) {
-            router.push("/profile")
+            router.push("/discover")
         }
 
     }, [user]);
