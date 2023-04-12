@@ -5,7 +5,7 @@ import axios from "axios"
  */
 const axiosInstance = axios.create({
     // baseURL: process.env.NODE_ENV === "development" ? `http://${process.env.API_HOST}/api` : "https://production.fr",
-    baseURL: process.env.NODE_ENV === "development" ? `/api` : "http://51.68.122.178:1337/api",
+    baseURL: process.env.NODE_ENV === "development" ? `/api` : "https://vps-84d4448b.vps.ovh.net/api",
     headers: {
         'Content-Type': 'application/json'
     }
