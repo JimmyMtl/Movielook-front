@@ -1,0 +1,114 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 1), transparent);
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 1rem 8rem;
+  z-index: 2;
+
+  .logoContainer {
+    width: 25%;
+display: flex;
+    .logoWrapper {
+      transition: .25s ease-in-out;
+      padding: .5rem 1rem;
+      margin-right: auto;
+      width: 150px;
+      &:hover {
+        background-color: rgba(255, 255, 255, .25);
+      }
+
+      .logo {
+        object-fit: contain;
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .linksWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    width: 50%;
+    a{text-decoration: none;}
+  }
+
+  .profileWrapper {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 25%;
+    justify-content: end;
+    color: #6A6A6A;
+
+    .profileBtn {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: normal;
+
+      .avatarContainer {
+        width: 25px;
+        height: 25px;
+        border: #E1AA14 1px solid;
+        border-radius: 50%;
+        margin: auto;
+
+        .avatar {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+    }
+
+    .signupBtn, .signinBtn {
+      padding: .5rem 1rem;
+      transition: .25s ease-in-out;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .signinBtn {
+      background-color: transparent;
+      border: #E1AA14 1px solid;
+      color: #E1AA14;
+
+      &:hover {
+        border-color: white;
+        color: white;
+      }
+    }
+
+    .signupBtn {
+      background-color: #E1AA14;
+      color: white;
+
+      &:hover {
+        background-color: rgb(220, 187, 99);
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+  }
+}

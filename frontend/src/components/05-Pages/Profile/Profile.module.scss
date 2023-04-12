@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+
+  .containerContent {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    width: 80%;
+
+    .containerContent {
+      width: 25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container {
+    width: 50%
+  }
+}

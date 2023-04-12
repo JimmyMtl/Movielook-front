@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+
+
+  .resultsList {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    //grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    width: 90%;
+    margin: auto;
+
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    .searchForm {
+      width: 20rem;
+      padding: 2rem;
+      margin-top: -15vh;
+
+    }
+
+    .resultsList {
+      width: 80%;
+
+      p {
+        grid-column: span 3;
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container {
+    .searchForm {
+      width: 25rem;
+      padding: 2.5rem;
+    }
+
+    .resultsList {
+      //grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      p {
+        grid-column: span 4;
+
+      }
+    }
+  }
+}

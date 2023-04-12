@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  min-height: 100vh;
+
+  .playlistMovies {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: -25vh;
+
+    .emptyPlaylist {
+      text-decoration: none;
+      border: #E1AA14 1px solid;
+      color: #E1AA14;
+      padding: .5rem 1rem;
+      transition: .25s ease-in-out;
+      border-radius: 5px;
+      &:hover {
+        color: white;
+        border-color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    .playlistMovies {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container {
+    .playlistMovies {
+      width: 50%;
+    }
+  }
+}

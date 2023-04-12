@@ -1,0 +1,15 @@
+.container {
+  color: #BEBEBE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem;
+  width: 100%;
+  background-color: rgba(30, 30, 30, 0.75);
+  border-radius: 5px;
+  transition: .25s ease-in-out;
+  &:hover {
+    background-color: rgba(30, 30, 30, 0.85);
+  }
+}

@@ -1,0 +1,18 @@
+.defaultBtn {
+  color: #6A6A6A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem;
+  width: 100%;
+  background-color: rgba(30, 30, 30, 0.75);
+  border-radius: 5px;
+  transition: .25s ease-in-out;
+  border: transparent;
+
+  &:hover {
+    color: #E1AA14;
+    cursor: pointer;
+  }
+}

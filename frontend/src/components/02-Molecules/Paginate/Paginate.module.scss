@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 1rem;
+
+  a {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: transparent 1px solid;
+    transition: .25s ease-in-out;
+
+    &:hover, &.active {
+      border: #E1AA14 1px solid;
+      cursor: pointer;
+    }
+  }
+
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    gap: .5rem;
+  }
+}

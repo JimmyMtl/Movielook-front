@@ -1,0 +1,9 @@
+.container {
+  width: 100vw;
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  filter: brightness(.25);
+  z-index: -1;
+}

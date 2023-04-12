@@ -1,0 +1,66 @@
+.container {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, .75);
+
+  p {
+    color: #6A6A6A;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .submitBtn {
+    padding: .5rem 1rem;
+    background-color: rgba(225, 170, 20, 1);
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    transition: .25s ease-in-out;
+
+    &:hover {
+      background-color: rgb(220, 187, 99);
+      cursor: pointer;
+    }
+  }
+
+  .wrapperRememberAndPassword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #6A6A6A;
+
+    .wrapperRememberMe {
+      display: flex;
+      gap: .5rem;
+
+      input[type="checkbox"] {
+        accent-color: #6A6A6A;
+
+        &:not(:checked) {
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    width: 25rem;
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container {
+    padding: 2.5rem;
+  }
+}

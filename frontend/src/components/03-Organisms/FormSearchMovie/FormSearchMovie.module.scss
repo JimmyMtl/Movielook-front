@@ -1,0 +1,88 @@
+.container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(30, 30, 30, .75);
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  .submitBtn, .filtersBtn {
+    padding: .5rem 1rem;
+    border: transparent;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: .25s ease-in-out;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .submitBtn {
+    background-color: rgba(225, 170, 20, 1);
+    color: white;
+
+    &:hover {
+      background-color: rgb(220, 187, 99);
+    }
+  }
+
+  .filtersBtn {
+    font-size: 1rem;
+    border: #E1AA14 solid 1px;
+    color: #E1AA14;
+
+    &:hover {
+      color: white;
+      border-color: white;
+    }
+  }
+
+  .inputQuery {
+    width: 100%;
+
+    label {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+
+  .wrapperFilter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+
+    .fullSized {
+      width: 100%;
+    }
+
+    .halfSized {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    width: 20rem;
+    padding: 2rem;
+    margin-top: -15vh;
+
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container {
+    width: 25rem;
+    padding: 2.5rem;
+
+  }
+}

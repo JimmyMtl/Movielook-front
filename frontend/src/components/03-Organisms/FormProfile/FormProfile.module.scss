@@ -1,0 +1,84 @@
+.container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(30, 30, 30, .75);
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  .avatarContainer {
+    width: 100px;
+    height: 100px;
+    border: #E1AA14 1px solid;
+    border-radius: 50%;
+    margin: auto;
+    padding: .25rem;
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    color: #6A6A6A;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .submitBtn, .signOutBtn {
+    padding: .5rem 1rem;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    transition: .25s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .submitBtn{
+    background-color: rgba(225, 170, 20, 1);
+
+    &:hover{
+      background-color: rgb(220, 187, 99);
+    }
+  }
+  .signOutBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: normal;
+    background-color: red;
+    &:hover{
+      background-color: #ff3d3d;
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    width: 25rem;
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container {
+    padding: 2.5rem;
+  }
+}

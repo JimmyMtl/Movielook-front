@@ -1,0 +1,27 @@
+.container {
+  background-color: transparent;
+  border: transparent;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .icon {
+    font-size: 2rem;
+    transition: color .25s ease-in-out;
+  }
+
+  &.liked {
+    color: red;
+  }
+
+  &.notLiked {
+    color: white;
+  }
+
+}

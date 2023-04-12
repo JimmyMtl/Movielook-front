@@ -1,0 +1,38 @@
+.container {
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  border: transparent 1px solid;
+  padding: 1rem;
+  transition: .25s ease-in-out;
+  color: #6A6A6A;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+
+  &:hover {
+    border: #E1AA14 1px solid;
+    color: #E1AA14;
+  }
+
+  .splashCard {
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100px;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+
+}
+
+@media screen and (min-width: 80rem) {
+}

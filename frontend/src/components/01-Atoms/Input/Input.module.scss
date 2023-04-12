@@ -1,0 +1,42 @@
+.input {
+  padding: .5rem 1rem;
+  display: block;
+  background-color: #6A6A6A;
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: #BEBEBE;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: #BEBEBE;
+  }
+
+  &::-ms-input-placeholder {
+    color: #BEBEBE;
+  }
+  &:disabled {
+    background-color: #444444;
+    color: #BEBEBE;
+  }
+}
+
+.container {
+  position: relative;
+
+  .input {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .icon {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    color: #BEBEBE;
+
+  }
+}
