@@ -29,7 +29,6 @@ const FormSignUp = () => {
         try {
             // TODO: Change any type
             const res: any = await signUp({...states, identifier: states?.email})
-            console.log('res', res)
             if (typeof res?.error !== "undefined") {
                 throw Error(res?.error?.message)
             }
@@ -75,9 +74,9 @@ const FormSignUp = () => {
                         placeholder={"Your password"}
                         required={true}
             />
-            <InputGroup htmlFor={"confirmpassword"}
+            <InputGroup htmlFor={"confirmPassword"}
                         value={confirmPassword} onChange={onChange}
-                        id={"confirmpassword"} name={"confirmpassword"}
+                        id={"confirmPassword"} name={"confirmPassword"}
                         label={"Confirm password"}
                         placeholder={"Confirm your password"}
                         type={"password"}
