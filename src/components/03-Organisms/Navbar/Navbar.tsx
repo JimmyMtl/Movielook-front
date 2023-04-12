@@ -51,7 +51,7 @@ const Navbar = () => {
                     </>
                 }
             </div>
-            <MobileSidebar isOpen={true}/>
+            <MobileSidebar/>
         </nav>
     );
 };

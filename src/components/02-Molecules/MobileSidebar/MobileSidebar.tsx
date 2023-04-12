@@ -1,12 +1,12 @@
 import React, {useContext, useEffect, useState} from 'react';
 import style from './MobileSidebar.module.scss';
-import Icon from "../../01-atoms/Icon/Icon";
 import {useRouter} from "next/router";
 import {AuthContext} from "@reducer/Auth/AuthContext";
 import {user} from "./MobileSidebarType"
 import Link from "next/link";
 import logo from "@components/00-Base/defaultAvatar.png";
 import Image from "next/image";
+import Icon from "@components/01-Atoms/Icon/Icon";
 
 const MobileSidebar = () => {
     const router = useRouter();
