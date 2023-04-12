@@ -19,3 +19,8 @@ export type playlists = {
         type: string
     }
 }[]
+
+export type user = {
+    username: string,
+    email: string,
+}

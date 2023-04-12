@@ -5,6 +5,8 @@ import SelectorGroup from "@components/02-Molecules/SelectorGroup/SelectorGroup"
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {Props, States, language, languageFiltered} from "./FormSearchMovieType";
+import axiosInstanceMovieDB from "@config/axiosInstanceMovieDB";
+import {toast} from "react-toastify";
 
 const FormSearchMovie = ({languages}: Props) => {
     const router = useRouter()
@@ -20,7 +22,7 @@ const FormSearchMovie = ({languages}: Props) => {
             setLanguagesFiltered(languages.map((language: language) => ({
                 label: language?.name || language?.english_name,
                 value: language?.iso_639_1
-            })))
+            })).sort((a, b) => a.label.toString().localeCompare(b.label.toString())))
         }
     }, [languages]);
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -35,7 +37,6 @@ const FormSearchMovie = ({languages}: Props) => {
         const url = router?.pathname + "?" + query
         router.push(url)
     }
-
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => setStates((prevState: States) => ({
         ...prevState,

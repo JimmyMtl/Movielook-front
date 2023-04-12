@@ -2,10 +2,8 @@ import React, {createContext, useReducer} from 'react';
 
 import AuthReducer from './AuthReducer'
 
-// import {refreshJwtToken} from "./AuthActions";
 import axiosInstance from "@config/axiosInstance";
 import LoadingSpinner from "@components/01-Atoms/LoadingSpinner/LoadingSpinner";
-// import LoadingSpinner from "../../components/01-atoms/LoadingSpinner/LoadingSpinner";
 
 export const AuthContext = createContext()
 
@@ -18,7 +16,7 @@ export const AuthProvider = ({children}) => {
     }
 
     axiosInstance.interceptors.request.use(config => {
-        const excludedRoutes = ["/signin", "/signup", "/signout"]
+        const excludedRoutes = ["/auth/signin", "/auth/signup"]
         if (!excludedRoutes.includes(window.location.pathname)) {
             const jwt = state?.jwt
             if (jwt) {

@@ -78,7 +78,7 @@ const LikeButton = ({playlists, movieID, fetchPlaylists}: Props) => {
             fetchPlaylists()
 
         } catch (e: any) {
-            const errorMessage = e.response ? e.response.data.error.message : e.message
+            const errorMessage = e?.response ? e?.response?.data?.error?.message : e?.message
             console.error(e)
             toast.error(errorMessage)
         } finally {

@@ -11,3 +11,7 @@ export const createNewPlaylist = async (name, user) => {
     console.log({data: {name, user}})
     return await axiosInstance.post(url, {data: {name, user}})
 }
+export const deletePlaylist = async (playlistID) => {
+    const url = `/playlists/${playlistID}`
+    return await axiosInstance.delete(url)
+}

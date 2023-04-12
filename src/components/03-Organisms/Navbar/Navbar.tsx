@@ -6,6 +6,7 @@ import {useContext, useEffect, useState} from "react";
 import {AuthContext} from "@reducer/Auth/AuthContext";
 import defaultAvatar from "@components/00-Base/defaultAvatar.png";
 import {user} from "./NavbarType"
+import MobileSidebar from "@components/02-Molecules/MobileSidebar/MobileSidebar";
 
 const Navbar = () => {
     const {user} = useContext(AuthContext)
@@ -17,7 +18,7 @@ const Navbar = () => {
     }, [user]);
 
     return (
-        <header className={style.container}>
+        <nav className={style.container}>
             <div className={style.logoContainer}>
                 <Link href={"/"} className={style.logoWrapper}>
                     <Image src={logo.src}
@@ -50,7 +51,8 @@ const Navbar = () => {
                     </>
                 }
             </div>
-        </header>
+            <MobileSidebar isOpen={true}/>
+        </nav>
     );
 };
 

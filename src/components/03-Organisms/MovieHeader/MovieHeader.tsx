@@ -8,7 +8,7 @@ import {useContext, useEffect, useState} from "react";
 import {AuthContext} from "@reducer/Auth/AuthContext";
 import {getAllPlaylists} from "@reducer/Playlist/PlaylistActions";
 import {toast} from "react-toastify";
-import {playlists, Props} from "./MovieHeaderType"
+import {playlists, Props, user} from "./MovieHeaderType"
 
 const MovieHeader = ({
                          movieID,
@@ -23,7 +23,7 @@ const MovieHeader = ({
     const languagesList = spokenLanguages?.map((language) => language?.name).join(" - ");
 
     const {user, dispatch} = useContext(AuthContext)
-    const [currentUser, setCurrentUser] = useState({});
+    const [currentUser, setCurrentUser] = useState<user | null>(null);
     const [playlists, setPlaylists] = useState<playlists>([]);
     const fetchPlaylists = async () => {
         dispatch({type: "SET_LOADING"})
