@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #BEBEBE;
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 95%;
+    margin: -10vh auto auto auto;
+
+    .imgTextWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .textWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .authWrapper {
+          display: flex;
+          gap: 1rem;
+
+          .btnSignIn, .btnSignUp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: .25s ease-in-out;
+            width: 12.5rem;
+
+            &:hover {
+              color: white;
+              border-color: white;
+              cursor: pointer;
+            }
+          }
+
+          .btnSignIn {
+            border: #E1AA14 1px solid;
+            color: #E1AA14;
+
+            &:hover {
+              color: white;
+              border-color: white;
+            }
+          }
+
+          .btnSignUp {
+            background-color: #E1AA14;
+            color: white;
+
+            &:hover {
+              background-color: #fac74a;
+            }
+          }
+
+        }
+      }
+
+      .imgContainer {
+
+        .imgWrapper {
+          width: 150px;
+          height: 150px;
+          margin: auto;
+
+          .img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    .contentWrapper {
+      width: 80%;
+
+      .imgTextWrapper {
+        flex-direction: row;
+
+        .textWrapper {
+          align-items: flex-start;
+          width: 50%;
+        }
+
+        .imgContainer {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
