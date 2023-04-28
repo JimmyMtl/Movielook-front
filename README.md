@@ -8,6 +8,9 @@ display their information.
 You can save your favorite movies in your favorites list and access them later. Create new playlists and add movies to
 it.
 
+This project was created in the purpose of a test for joining the Epitech association Junior Conseil Taker, and was
+developped in one week using Next.js with Typescript. Strapi for the backend and PostgreSQL for the Database.
+
 ## Project stack
 
 - [React](https://reactjs.org/)
@@ -23,4 +26,4 @@ You can access the deployed project [movielook.mtlk.fr](https://movielook.mtlk.f
 
 
 ---
-Last update: 2023-04-28 15:40:00 - Jimmy MARTEL
+***Last update: 2023-04-28 15:40:00 - Jimmy MARTEL***
