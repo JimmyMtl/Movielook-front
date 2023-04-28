@@ -5,6 +5,7 @@ import Discover from "@components/05-Pages/Movies/Discover/Discover";
 import {AuthContext} from "@reducer/Auth/AuthContext";
 import {useRouter} from "next/router";
 import {genreList} from "@components/00-Base/GenreList/genreList";
+import * as process from "process";
 
 type datas = {
     results: Movie[],
@@ -35,8 +36,7 @@ const Index = () => {
         try {
 
             dispatch({type: "SET_LOADING"})
-            const api_key = "55bb5aeea2538b26cf848582959d4fc8"
-            console.log(genreList?.find(genre => genre.genre === user.preferedGenre)?.id)
+            const api_key = process.env.API_KEY
             const baseParams = {
                 api_key,
                 with_genres: genreList?.find(genre => genre.genre === user.preferedGenre)?.id,
@@ -48,7 +48,6 @@ const Index = () => {
             if (typeof resMovies?.data === "undefined") {
                 throw Error("Cannot fetch themoviedb API for discover movies")
             }
-            console.log('resMovies', resMovies.data)
             setDatas(resMovies?.data)
         } catch (e) {
             console.error(e)
@@ -57,13 +56,12 @@ const Index = () => {
         }
     }
     useEffect(() => {
-
         fetchDiscoverMovies()
     }, [user, router]);
     return (
         <>
             <Head>
-                <title>Discover {user?.preferedGenre} - NeoMovie</title>
+                <title>Discover {user?.preferedGenre} - MovieLook</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>

@@ -1,6 +1,7 @@
 import style from './Footer.module.scss';
 import Image from "next/image";
 import logo from "@components/00-Base/logo.png";
+import logoMovieDB from "@components/00-Base/logoMovieDB.svg";
 import Link from "next/link";
 import Icon from "@components/01-Atoms/Icon/Icon";
 
@@ -29,7 +30,14 @@ const Footer = () => {
                        className={style.logo} alt={"logo"}
                 />
             </Link>
-            <p>Copyright NeoMovie - 2023 ©</p>
+            <a href={"https://www.themoviedb.org"} target={"_blank"} className={style.logoWrapper}>
+                <Image src={logoMovieDB.src}
+                       width={0} height={0}
+                       sizes={"100vw"}
+                       className={style.logo} alt={"logo"}
+                />
+            </a>
+            <p>Copyright MovieLook - 2023 ©</p>
         </footer>
     );
 };

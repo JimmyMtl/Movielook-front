@@ -23,7 +23,7 @@ export const getServerSideProps = async ({query}: any) => {
     try {
 
         const params = {
-            api_key: "55bb5aeea2538b26cf848582959d4fc8",
+            api_key: process.env.API_KEY || "",
             language: query?.language || "en"
         }
         const urlMovie = `/movie/${query?.id}?` + new URLSearchParams(params)

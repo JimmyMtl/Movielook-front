@@ -6,8 +6,8 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>Sign Up - NeoMovie</title>
-                <meta name="description" content="SignUp on NeoMovie"/>
+                <title>Sign Up - MovieLook</title>
+                <meta name="description" content="SignUp on MovieLook"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>

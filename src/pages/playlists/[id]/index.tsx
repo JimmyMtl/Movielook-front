@@ -62,7 +62,7 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>{playlist?.attributes?.name} - NeoMovie</title>
+                <title>{playlist?.attributes?.name} - MovieLook</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>

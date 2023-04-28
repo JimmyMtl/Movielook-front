@@ -2,6 +2,7 @@ import React from 'react';
 import Search from "@components/05-Pages/Movies/Search/Search";
 import axiosInstanceMovieDB from "@config/axiosInstanceMovieDB";
 import Head from "next/head";
+
 type Props = {
     results: Movie[],
     page: number,
@@ -34,7 +35,7 @@ const Index = ({results, page, total_pages, total_results, hasQuery, genres, lan
     return (
         <>
             <Head>
-                <title>Search Movie - NeoMovie</title>
+                <title>Search Movie - MovieLook</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
@@ -50,7 +51,7 @@ export const getServerSideProps = async ({query}: any) => {
         if (typeof query.api_key !== "undefined") {
             delete query.api_key
         }
-        const api_key = "55bb5aeea2538b26cf848582959d4fc8"
+        const api_key = process.env.API_KEY || ""
         const hasQuery = (typeof query.query !== "undefined" && query.query !== "")
         const baseParams = {
             api_key

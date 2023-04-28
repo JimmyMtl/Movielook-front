@@ -11,7 +11,7 @@ const PlaylistMovieLink = ({movie}: Props) => {
     const fetchMovie = async () => {
         try {
 
-            const res = await axiosInstanceMovieDB.get(`/movie/${movie?.attributes?.movie_id}?api_key=55bb5aeea2538b26cf848582959d4fc8`)
+            const res = await axiosInstanceMovieDB.get(`/movie/${movie?.attributes?.movie_id}?api_key=${process.env.API_KEY}`)
             if (typeof res.data === "undefined") {
                 throw Error("Cannot fetch movie")
             }

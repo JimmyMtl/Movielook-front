@@ -10,10 +10,10 @@ const HomePage = () => {
         <div className={style.container}>
             <Header imgSrc={backgroundHeader.src}/>
             <div className={style.contentWrapper}>
-                <h1>NeoMovie</h1>
+                <h1>MovieLook</h1>
                 <div className={style.imgTextWrapper}>
                     <div className={style.textWrapper}>
-                        <p>NeoMovie is a movie database website. You can search for movies, discover movies based on
+                        <p>MovieLook is a movie database website. You can search for movies, discover movies based on
                             your
                             prefered genre.
                         </p>
