@@ -20,6 +20,8 @@ const HomePage = () => {
                         <p>You can also create an account to save your playlists and your prefered genre.</p>
                         <div className={style.authWrapper}>
                             <Link href={"/auth/signup"} className={style.btnSignUp}>SignUp now</Link>
+                            <span>or</span>
+                            <Link href={"/movies/search"} className={style.btnSignIn}>Search your movie</Link>
                         </div>
                     </div>
                     <div className={style.imgContainer}>
