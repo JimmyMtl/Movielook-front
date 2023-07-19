@@ -12,7 +12,7 @@ const YoutubeVideosList = ({videos}: Props) => {
     return (
         <div className={style.container}>
             {/*// maps videos from videos index to activeVideo index*/}
-            <h4>Related videos</h4>
+            <h2>Related videos</h2>
             {videos.map((video, idx) => (
                 idx <= activeVideo ?
                     <YoutubeVideo video={video} key={idx}/> : null

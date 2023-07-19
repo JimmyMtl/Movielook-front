@@ -3,7 +3,7 @@ import defaultBackground from "@components/00-Base/supermanbatman.jpg";
 
 const Header = ({imgSrc = defaultBackground.src}) => {
     return (
-        <header className={style.container} style={{backgroundImage: `url(${imgSrc})`}}/>
+        <header role={"banner"} className={style.container} style={{backgroundImage: `url(${imgSrc})`}}/>
     );
 };
 

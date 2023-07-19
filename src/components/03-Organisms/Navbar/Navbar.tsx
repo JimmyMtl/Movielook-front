@@ -18,7 +18,7 @@ const Navbar = () => {
     }, [user]);
 
     return (
-        <nav className={style.container}>
+        <nav className={style.container} role={"navigation"}>
             <div className={style.logoContainer}>
                 <Link href={"/"} className={style.logoWrapper}>
                     <Image src={logo.src}
@@ -46,8 +46,8 @@ const Navbar = () => {
 
                     :
                     <>
-                        <Link href={"/auth/signin"} className={style.signinBtn}>SignIn</Link>
-                        <Link href={"/auth/signup"} className={style.signupBtn}>SignUp</Link>
+                        <Link href={"/auth/signin"} className={style.signinBtn}>Sign In</Link>
+                        <Link href={"/auth/signup"} className={style.signupBtn}>Sign Up</Link>
                     </>
                 }
             </div>

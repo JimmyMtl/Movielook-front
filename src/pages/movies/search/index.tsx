@@ -74,8 +74,6 @@ export const getServerSideProps = async ({query}: any) => {
         if (typeof resLanguages.data === "undefined") {
             throw Error("Cannot fetch themoviedb API for languages")
         }
-        console.log(resLanguages?.data)
-        // console.log(hasQuery)
         return {
             props: {
                 ...resMovies.data,

@@ -5,8 +5,6 @@ import SelectorGroup from "@components/02-Molecules/SelectorGroup/SelectorGroup"
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {Props, States, language, languageFiltered} from "./FormSearchMovieType";
-import axiosInstanceMovieDB from "@config/axiosInstanceMovieDB";
-import {toast} from "react-toastify";
 
 const FormSearchMovie = ({languages}: Props) => {
     const router = useRouter()
@@ -47,18 +45,20 @@ const FormSearchMovie = ({languages}: Props) => {
     const handleShowFilters = () => setShowFilters(precState => !precState)
 
     return (
-        <form onSubmit={onSubmit} className={style.container}>
+        <form onSubmit={onSubmit} className={style.container} role={"search"}>
+            <h1 className={style.h1}>Find a movie</h1>
             <InputGroup icon={"faSearch"} type={"text"} id={"query"} name={"query"} htmlFor={"query"}
-                        label={"Search a movie"} placeholder={"Western spaghetti, zombies..."}
+                        label={"Search"} placeholder={"Western spaghetti, zombies..."}
                         classNames={style.inputQuery}
                         onChange={handleInputChange}
                         value={query}
                         required={true}
             />
-            <button className={style.filtersBtn} onClick={handleShowFilters} type={"button"}><Icon
+            <button className={style.filtersBtn} onClick={handleShowFilters} type={"button"}
+                    aria-expanded={showFilters}><span>{showFilters ? "Hide filters" : "Show filters"}</span><Icon
                 icon="faSliders"/></button>
-            {showFilters ? <div className={style.wrapperFilter}>
-                {/*<SelectorGroup label={"Genre"} classNames={style.fullSized}/>*/}
+            <div className={`${style.wrapperFilter} ${showFilters ? style.show : style.hide}`}>
+                {/*<SelectorGroup label={"Ge nre"} classNames={style.fullSized}/>*/}
                 <InputGroup type={"number"} id={"primary_release_year"} name={"primary_release_year"}
                             htmlFor={"primary_release_year"}
                             label={"Release year"} placeholder={"1971"}
@@ -70,7 +70,7 @@ const FormSearchMovie = ({languages}: Props) => {
                 <SelectorGroup label={"Language"} value={language} name={"language"} id={"language"}
                                onChange={handleInputChange} htmlFor={"language"}
                                options={languagesFiltered} classNames={style.halfSized}/>
-            </div> : null}
+            </div>
             <button type={"submit"} className={style.submitBtn}>Search</button>
         </form>
     );

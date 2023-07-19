@@ -7,8 +7,8 @@ import Icon from "@components/01-Atoms/Icon/Icon";
 
 const Footer = () => {
     return (
-        <footer className={style.container}>
-            <p>FOLLOW US</p>
+        <footer className={style.container} role={"contentinfo"}>
+            <h2 className={style.h2}>FOLLOW US</h2>
             <div className={style.socialWrapper}>
                 <Link href={"/"} className={style.link}><Icon classNames={style.icon} icon="faFacebookF"/></Link>
                 <Link href={"/"} className={style.link}><Icon classNames={style.icon} icon="faInstagram"/></Link>
@@ -16,13 +16,13 @@ const Footer = () => {
                 <Link href={"/"} className={style.link}><Icon classNames={style.icon} icon="faEnvelope"/></Link>
             </div>
 
-            <div className={style.linksWrapper}>
-                <Link href={"/"}>Contact</Link>
-                <Link href={"/"}>Who are we</Link>
-                <Link href={"/"}>Recrutment</Link>
-                <Link href={"/"}>CGU</Link>
-                <Link href={"/"}>RGPD</Link>
-            </div>
+            <ul className={style.linksWrapper}>
+                <li><Link href={"/"}>Contact</Link></li>
+                <li><Link href={"/"}>Who are we</Link></li>
+                <li><Link href={"/"}>Recrutment</Link></li>
+                <li><Link href={"/"}>CGU</Link></li>
+                <li><Link href={"/"}>RGPD</Link></li>
+            </ul>
             <Link href={"/"} className={style.logoWrapper}>
                 <Image src={logo.src}
                        width={0} height={0}
