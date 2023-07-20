@@ -1,7 +1,7 @@
 import style from './MovieCard.module.scss';
 import Link from "next/link";
 import {useRouter} from "next/router";
-
+import Image from "next/image";
 type Movie = {
     movie: {
         id: number,
@@ -15,8 +15,7 @@ const MovieCard = ({movie}: Movie) => {
     return (
         <Link href={`/movie/${movie?.id}?${new URLSearchParams(JSON.parse(JSON.stringify(router?.query)))}`}
               className={style.container}>
-            <span className={style.splashCard}
-                  style={{backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie?.backdrop_path || movie?.poster_path})`}}/>
+            <Image className={style.splashCard} width={300} height={300} alt={movie.title} src={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path || movie?.poster_path}`}/>
             <p className={style.title}>{movie?.title}</p>
         </Link>
     );
